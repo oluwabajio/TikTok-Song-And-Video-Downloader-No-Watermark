@@ -139,6 +139,7 @@
 
                                 out.println("<h2>Resolution</h2>");
 
+
                                 out.println("<ul>");
 
                                 for (int i=0; i<videoWithAudioFormats.size(); i++) {
@@ -159,6 +160,90 @@
 
 
                     %>
+
+                    <br>
+
+
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#video" role="tab" aria-controls="pills-home" aria-selected="true">Video</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#audio" role="tab" aria-controls="pills-profile" aria-selected="false">Audio</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="video" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <%
+                                //                        doAnalysis(request);
+
+                                videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
+
+                                if (videoWithAudioFormats != null) {
+                                    System.out.println("its not null");
+                                    if (videoWithAudioFormats.size() >= 1) {
+
+                                        out.println("<h2>Resolution</h2>");
+
+
+                                        out.println("<ul>");
+
+                                        for (int i=0; i<videoWithAudioFormats.size(); i++) {
+                                            String url = videoWithAudioFormats.get(i).url();
+                                            String videof =videoWithAudioFormats.get(i).videoQuality() +"";
+                                            out.println("<li><a href="+ url +" target=\"_blank\">"+ videof +"</a></li>");
+                                        }
+
+                                        out.println("</ul>");
+                                    } else {
+                                        System.out.println("isize is less than one");
+                                    }
+
+                                } else {
+
+                                    System.out.println("its null");
+                                }
+
+
+                            %>
+                        </div>
+                        <div class="tab-pane fade" id="audio" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <%
+                                //                        doAnalysis(request);
+
+                                videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
+
+                                if (videoWithAudioFormats != null) {
+                                    System.out.println("its not null");
+                                    if (videoWithAudioFormats.size() >= 1) {
+
+                                        out.println("<h2>Resolution</h2>");
+
+
+                                        out.println("<ul>");
+
+                                        for (int i=0; i<videoWithAudioFormats.size(); i++) {
+                                            String url = videoWithAudioFormats.get(i).url();
+                                            String videof =videoWithAudioFormats.get(i).videoQuality() +"";
+                                            out.println("<li><a href="+ url +" target=\"_blank\">"+ videof +"</a></li>");
+                                        }
+
+                                        out.println("</ul>");
+                                    } else {
+                                        System.out.println("isize is less than one");
+                                    }
+
+                                } else {
+
+                                    System.out.println("its null");
+                                }
+
+
+                            %>
+                        </div>
+
+                    </div>
+
 
                     <%!
                         private void doAnalysis(HttpServletRequest request) {
@@ -184,7 +269,8 @@
 
 
                     %>
-                    <br><br><br>
+                    <br><br>
+
 
                     <p>
                         Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
