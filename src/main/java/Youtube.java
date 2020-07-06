@@ -2,7 +2,10 @@ import com.github.kiulian.downloader.YoutubeDownloader;
 import com.github.kiulian.downloader.YoutubeException;
 import com.github.kiulian.downloader.model.VideoDetails;
 import com.github.kiulian.downloader.model.YoutubeVideo;
+import com.github.kiulian.downloader.model.formats.AudioFormat;
 import com.github.kiulian.downloader.model.formats.AudioVideoFormat;
+import com.github.kiulian.downloader.model.formats.VideoFormat;
+import com.github.kiulian.downloader.model.quality.VideoQuality;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -45,10 +48,28 @@ public class Youtube extends HttpServlet {
             // get videos with audio
             List<AudioVideoFormat> videoWithAudioFormats = video.videoWithAudioFormats();
             videoWithAudioFormats.forEach(it -> {
-                System.out.println(it.videoQuality() + " : " + it.url());
+                System.out.println(it.videoQuality() + " vidWithAudio: " + it.url());
 
             });
 
+            // filtering only audio formats
+            List<AudioFormat> audioFormats = video.audioFormats();
+            audioFormats.forEach(it -> {
+                System.out.println(it.audioQuality() + " Audio: " + it.url());
+            });
+
+            // All Video Type
+            List<VideoFormat> videos = video.videoFormats();
+            videos.forEach(it -> {
+                System.out.println(it.videoQuality() + " allVids: " + it.url());
+            });
+
+
+//            // filtering only video formats
+//            List<VideoFormat> videoFormats = video.findVideoWithQuality(VideoQuality.large);
+//            videoFormats.forEach(it -> {
+//                System.out.println(it.videoQuality() + " noAudio: " + it.url());
+//            });
             AudioVideoFormat format = videoWithAudioFormats.get(videoWithAudioFormats.size() - 1);
 
 
@@ -60,6 +81,8 @@ public class Youtube extends HttpServlet {
 
             request.setAttribute("url", format.url());
             request.setAttribute("vid_formats", videoWithAudioFormats);
+            request.setAttribute("audio_formats", audioFormats);
+            request.setAttribute("all_vid_formats", videos);
             RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
             rd.forward(request, response);
 //

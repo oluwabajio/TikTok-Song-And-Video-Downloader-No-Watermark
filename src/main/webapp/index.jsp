@@ -1,6 +1,8 @@
 <%@ page import="com.github.kiulian.downloader.model.formats.AudioVideoFormat" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.io.IOException" %><%--
+<%@ page import="java.io.IOException" %>
+<%@ page import="com.github.kiulian.downloader.model.formats.AudioFormat" %>
+<%@ page import="com.github.kiulian.downloader.model.formats.VideoFormat" %><%--
   Created by IntelliJ IDEA.
   User: administrator
   Date: 05/07/2020
@@ -125,40 +127,12 @@
                     </form>
 
                     <%!
+
+
                         List<AudioVideoFormat> videoWithAudioFormats = null;
-                    %>
-
-                    <%
-                        //                        doAnalysis(request);
-
-                        videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
-
-                        if (videoWithAudioFormats != null) {
-                            System.out.println("its not null");
-                            if (videoWithAudioFormats.size() >= 1) {
-
-                                out.println("<h2>Resolution</h2>");
-
-
-                                out.println("<ul>");
-
-                                for (int i=0; i<videoWithAudioFormats.size(); i++) {
-                                    String url = videoWithAudioFormats.get(i).url();
-                                    String videof =videoWithAudioFormats.get(i).videoQuality() +"";
-                                    out.println("<li><a href="+ url +" target=\"_blank\">"+ videof +"</a></li>");
-                                }
-
-                                out.println("</ul>");
-                            } else {
-                                System.out.println("isize is less than one");
-                            }
-
-                        } else {
-
-                            System.out.println("its null");
-                        }
-
-
+                        List<AudioFormat> audioOnlyFormats = null;
+                        List<VideoFormat> videoOnlyFormats = null;
+                        List<VideoFormat> allVidoeFormats = null;
                     %>
 
                     <br>
@@ -166,35 +140,99 @@
 
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#video" role="tab" aria-controls="pills-home" aria-selected="true">Video</a>
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#video" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#audio" role="tab" aria-controls="pills-profile" aria-selected="false">Audio</a>
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#audio" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-all-videos-tab" data-toggle="pill" href="#allvideo" role="tab" aria-controls="pills-home" aria-selected="false">Home</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="video" role="tabpanel" aria-labelledby="pills-home-tab">
+
                             <%
-                                //                        doAnalysis(request);
+                                //Videos WIth Audio
 
                                 videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
+                                audioOnlyFormats = (List<AudioFormat>) request.getAttribute("audio_formats");
+                                videoOnlyFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
+                                allVidoeFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
 
                                 if (videoWithAudioFormats != null) {
                                     System.out.println("its not null");
                                     if (videoWithAudioFormats.size() >= 1) {
 
-                                        out.println("<h2>Resolution</h2>");
+                                        out.println("<table>");
+                                        out.println("<tr>");
+                                        out.println("<th>Quality</th>");
+                                        out.println("<th>Extension</th>");
+                                        out.println("<th>Download</th>");
+                                        out.println("</tr>");
 
-
-                                        out.println("<ul>");
 
                                         for (int i=0; i<videoWithAudioFormats.size(); i++) {
                                             String url = videoWithAudioFormats.get(i).url();
-                                            String videof =videoWithAudioFormats.get(i).videoQuality() +"";
-                                            out.println("<li><a href="+ url +" target=\"_blank\">"+ videof +"</a></li>");
+                                            String videQuality =videoWithAudioFormats.get(i).videoQuality() +"";
+                                            String videoExtension =videoWithAudioFormats.get(i).extension().value() +"";
+
+                                            out.println("<tr>");
+                                            out.println("<td>"+ videQuality +"</td>");
+                                            out.println("<td>"+ videoExtension +"</td>");
+                                            out.println("<td><a href="+ url +" target=\"_blank\">Download</a></td>");
+                                            out.println("</tr>");
                                         }
 
-                                        out.println("</ul>");
+
+                                        out.println("</table>");
+                                    } else {
+                                        System.out.println("isize is less than one");
+                                    }
+
+                                } else {
+
+                                    System.out.println("its null");
+                                }
+
+
+                            %>
+
+                        </div>
+                        <div class="tab-pane fade" id="audio" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                            <%
+                                // Audio Only
+                                videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
+                                audioOnlyFormats = (List<AudioFormat>) request.getAttribute("audio_formats");
+                                videoOnlyFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
+                                allVidoeFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
+
+                                if (audioOnlyFormats != null) {
+                                    System.out.println("its not null");
+                                    if (audioOnlyFormats.size() >= 1) {
+
+                                        out.println("<table>");
+                                        out.println("<tr>");
+                                        out.println("<th>Quality</th>");
+                                        out.println("<th>Extension</th>");
+                                        out.println("<th>Download</th>");
+                                        out.println("</tr>");
+
+
+                                        for (int i=0; i<audioOnlyFormats.size(); i++) {
+                                            String url = audioOnlyFormats.get(i).url();
+                                            String audioQuality =audioOnlyFormats.get(i).audioQuality() +"";
+                                            String audioExtension =audioOnlyFormats.get(i).extension().value() +"";
+                                            out.println("<tr>");
+                                            out.println("<td>"+ audioQuality +"</td>");
+                                            out.println("<td>"+ audioExtension +"</td>");
+                                            out.println("<td><a href="+ url +" target=\"_blank\">Download</a></td>");
+                                            out.println("</tr>");
+                                        }
+
+
+                                        out.println("</table>");
                                     } else {
                                         System.out.println("isize is less than one");
                                     }
@@ -207,28 +245,38 @@
 
                             %>
                         </div>
-                        <div class="tab-pane fade" id="audio" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                        <div class="tab-pane fade" id="allvideo" role="tabpanel" aria-labelledby="pills-profile-tab">
+
                             <%
-                                //                        doAnalysis(request);
-
+                                // All Video Type
                                 videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
+                                audioOnlyFormats = (List<AudioFormat>) request.getAttribute("audio_formats");
+                                videoOnlyFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
+                                allVidoeFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
 
-                                if (videoWithAudioFormats != null) {
+                                if (allVidoeFormats != null) {
                                     System.out.println("its not null");
-                                    if (videoWithAudioFormats.size() >= 1) {
+                                    if (allVidoeFormats.size() >= 1) {
 
-                                        out.println("<h2>Resolution</h2>");
+                                        out.println("<table>");
+                                        out.println("<tr>");
+                                        out.println("<th>Resolution</th>");
+                                        out.println("<th>Download</th>");
+                                        out.println("</tr>");
 
 
-                                        out.println("<ul>");
-
-                                        for (int i=0; i<videoWithAudioFormats.size(); i++) {
-                                            String url = videoWithAudioFormats.get(i).url();
-                                            String videof =videoWithAudioFormats.get(i).videoQuality() +"";
-                                            out.println("<li><a href="+ url +" target=\"_blank\">"+ videof +"</a></li>");
+                                        for (int i=0; i<allVidoeFormats.size(); i++) {
+                                            String url = allVidoeFormats.get(i).url();
+                                            String audioQuality =allVidoeFormats.get(i).videoQuality() +"";
+                                            out.println("<tr>");
+                                            out.println("<td>"+ audioQuality +"</td>");
+                                            out.println("<td><a href="+ url +" target=\"_blank\">Download</a></td>");
+                                            out.println("</tr>");
                                         }
 
-                                        out.println("</ul>");
+
+                                        out.println("</table>");
                                     } else {
                                         System.out.println("isize is less than one");
                                     }
@@ -245,30 +293,7 @@
                     </div>
 
 
-                    <%!
-                        private void doAnalysis(HttpServletRequest request) {
-                            List<AudioVideoFormat> videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
 
-                            if (videoWithAudioFormats != null) {
-                                System.out.println("its not null");
-                                if (videoWithAudioFormats.size() >= 1) {
-                                    videoWithAudioFormats.forEach((n) -> {
-                                        System.out.println("isize is more than one");
-
-
-                                    });
-                                } else {
-                                    System.out.println("isize is less than one");
-                                }
-
-                            } else {
-
-                                System.out.println("its null");
-                            }
-                        }
-
-
-                    %>
                     <br><br>
 
 
@@ -282,6 +307,20 @@
 
         </div>
     </section><!-- End About Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- ======= About Section ======= -->
