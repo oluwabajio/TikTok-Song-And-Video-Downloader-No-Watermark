@@ -2,7 +2,14 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="com.github.kiulian.downloader.model.formats.AudioFormat" %>
-<%@ page import="com.github.kiulian.downloader.model.formats.VideoFormat" %><%--
+<%@ page import="com.github.kiulian.downloader.model.formats.VideoFormat" %>
+<%@ page import="java.io.File" %>
+<%@ page import="com.github.kiulian.downloader.YoutubeDownloader" %>
+<%@ page import="com.github.kiulian.downloader.model.YoutubeVideo" %>
+<%@ page import="java.util.regex.Pattern" %>
+<%@ page import="java.util.regex.Matcher" %>
+<%@ page import="com.github.kiulian.downloader.OnYoutubeDownloadListener" %>
+<%@ page import="com.github.kiulian.downloader.YoutubeException" %><%--
   Created by IntelliJ IDEA.
   User: administrator
   Date: 05/07/2020
@@ -36,11 +43,14 @@
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+
 </head>
-<body>
+
 <body>
 
 <!-- ======= Header ======= -->
@@ -54,7 +64,7 @@
         <nav class="nav-menu d-none d-lg-block">
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="tiktok.jsp">Tik Tok</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="trainers.html">Trainers</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -86,21 +96,6 @@
     </div>
 </header><!-- End Header -->
 
-<%--  <!-- ======= Hero Section ======= -->--%>
-<%--  <section id="hero" class="d-flex justify-content-center align-items-center">--%>
-<%--    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">--%>
-<%--      <h1 style="text-align: center">Download Youtube Video And Audio Mp3</h1><br><br>--%>
-
-<%--      <form action="Youtube" target="_blank">--%>
-<%--        <div class="row">--%>
-<%--          <input type="text" class="col-9" name="vid_url">--%>
-<%--          <input type="submit" class="col-3">--%>
-<%--        </div>--%>
-<%--      </form>--%>
-
-<%--    </div>--%>
-<%--  </section><!-- End Hero -->--%>
-
 <main id="main">
 
     <!-- ======= About Section ======= -->
@@ -114,25 +109,73 @@
 
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                    <img src="assets/img/how_to.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                    <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-
+                    <h3>Download High Quality Youtube Videos and Mp3 Audio</h3>
+                    <br>
                     <form action="Youtube">
                         <div class="row">
-                            <input type="text" class="col-9" name="vid_url">
-                            <input type="submit" class="col-3">
+                            <input type="text"placeholder="Enter Youtube Url" class="col-8 ml-3 form-control" name="vid_url">
+                            <input type="submit" class="col-3" name="submit" value="Download">
+
                         </div>
                     </form>
 
                     <%!
 
 
+                        final static String reg = "(?:youtube(?:-nocookie)?\\.com\\/(?:[^\\/\\n\\s]+\\/\\S+\\/|(?:v|e(?:mbed)?)\\/|\\S*?[?&]v=)|youtu\\.be\\/)([a-zA-Z0-9_-]{11})";
+                        public static String getVideoId(String videoUrl) {
+                            if (videoUrl == null || videoUrl.trim().length() <= 0)
+                                return null;
+
+                            Pattern pattern = Pattern.compile(reg, Pattern.CASE_INSENSITIVE);
+                            Matcher matcher = pattern.matcher(videoUrl);
+
+                            if (matcher.find())
+                                return matcher.group(1);
+                            return null;
+                        }
+
+                        private String formatVideoQualityString(String videQuality) {
+
+                            String formatedQUality;
+                            if (videQuality.equalsIgnoreCase("tiny")) {
+                                formatedQUality = "144p";
+                            } else if (videQuality.equalsIgnoreCase("small")) {
+                                formatedQUality = "240p";
+                            } else if (videQuality.equalsIgnoreCase("medium")) {
+                                formatedQUality = "360p";
+                            }else if (videQuality.equalsIgnoreCase("large")) {
+                                formatedQUality = "480p";
+                            }else if (videQuality.equalsIgnoreCase("hd720")) {
+                                formatedQUality = "720p";
+                            }else if (videQuality.equalsIgnoreCase("hd1080")) {
+                                formatedQUality = "1080p";
+                            }else if (videQuality.equalsIgnoreCase("hd1440")) {
+                                formatedQUality = "1440p";
+                            }else if (videQuality.equalsIgnoreCase("hd2160")) {
+                                formatedQUality = "2160p";
+                            }else if (videQuality.equalsIgnoreCase("hd2880p")) {
+                                formatedQUality = "2880p";
+                            }else if (videQuality.equalsIgnoreCase("highres")) {
+                                formatedQUality = "3072p";
+                            } else {
+                                formatedQUality = videQuality;
+                            }
+
+                            return formatedQUality;
+                        }
+
+
+
                         List<AudioVideoFormat> videoWithAudioFormats = null;
                         List<AudioFormat> audioOnlyFormats = null;
                         List<VideoFormat> videoOnlyFormats = null;
                         List<VideoFormat> allVidoeFormats = null;
+
+                        String ytUrl = null;
                     %>
 
                     <br>
@@ -140,21 +183,23 @@
 
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#video" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#video" role="tab" aria-controls="pills-home" aria-selected="true">Videos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#audio" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#audio" role="tab" aria-controls="pills-profile" aria-selected="false">Audio (Mp3)</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-all-videos-tab" data-toggle="pill" href="#allvideo" role="tab" aria-controls="pills-home" aria-selected="false">Home</a>
+                            <a class="nav-link" id="pills-all-videos-tab" data-toggle="pill" href="#allvideo" role="tab" aria-controls="pills-home" aria-selected="false">All Videos</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="video" role="tabpanel" aria-labelledby="pills-home-tab">
 
                             <%
-                                //Videos WIth Audio
+                                //yt Url
+                                ytUrl = (String) request.getAttribute("yt_url");
 
+                                //Videos WIth Audio
                                 videoWithAudioFormats = (List<AudioVideoFormat>) request.getAttribute("vid_formats");
                                 audioOnlyFormats = (List<AudioFormat>) request.getAttribute("audio_formats");
                                 videoOnlyFormats = (List<VideoFormat>) request.getAttribute("all_vid_formats");
@@ -164,28 +209,33 @@
                                     System.out.println("its not null");
                                     if (videoWithAudioFormats.size() >= 1) {
 
-                                        out.println("<table>");
-                                        out.println("<tr>");
+                                        out.println("<table class=\"table table-bordered \">");
                                         out.println("<th>Quality</th>");
                                         out.println("<th>Extension</th>");
                                         out.println("<th>Download</th>");
-                                        out.println("</tr>");
+
 
 
                                         for (int i=0; i<videoWithAudioFormats.size(); i++) {
                                             String url = videoWithAudioFormats.get(i).url();
                                             String videQuality =videoWithAudioFormats.get(i).videoQuality() +"";
+                                            videQuality = formatVideoQualityString(videQuality);
                                             String videoExtension =videoWithAudioFormats.get(i).extension().value() +"";
 
                                             out.println("<tr>");
                                             out.println("<td>"+ videQuality +"</td>");
                                             out.println("<td>"+ videoExtension +"</td>");
-                                            out.println("<td><a href="+ url +" target=\"_blank\">Download</a></td>");
+                                            out.println("<td><a href="+ url +" target=\"_blank\" class=\"learn-more-btn\">Download</a></td>");
                                             out.println("</tr>");
                                         }
 
 
                                         out.println("</table>");
+
+                                        out.println("<input type=\"text\" id=\"yt-url\" value=\"" + ytUrl +"\" hidden><br>");
+                                        out.println("<input type=\"text\" id=\"vid-url\" value=\"" + videoWithAudioFormats.get(0).url() +"\" hidden><br>");
+
+
                                     } else {
                                         System.out.println("isize is less than one");
                                     }
@@ -212,7 +262,7 @@
                                     System.out.println("its not null");
                                     if (audioOnlyFormats.size() >= 1) {
 
-                                        out.println("<table>");
+                                        out.println("<table class=\"table table-bordered\">");
                                         out.println("<tr>");
                                         out.println("<th>Quality</th>");
                                         out.println("<th>Extension</th>");
@@ -227,7 +277,7 @@
                                             out.println("<tr>");
                                             out.println("<td>"+ audioQuality +"</td>");
                                             out.println("<td>"+ audioExtension +"</td>");
-                                            out.println("<td><a href="+ url +" target=\"_blank\">Download</a></td>");
+                                            out.println("<td><a href="+ url +" target=\"_blank\" class=\"learn-more-btn\">Download</a></td>");
                                             out.println("</tr>");
                                         }
 
@@ -259,19 +309,25 @@
                                     System.out.println("its not null");
                                     if (allVidoeFormats.size() >= 1) {
 
-                                        out.println("<table>");
+                                        out.println("<table class=\"table table-bordered\">");
                                         out.println("<tr>");
-                                        out.println("<th>Resolution</th>");
+                                        out.println("<th>Quality</th>");
+                                        out.println("<th>Extension</th>");
                                         out.println("<th>Download</th>");
                                         out.println("</tr>");
 
 
                                         for (int i=0; i<allVidoeFormats.size(); i++) {
                                             String url = allVidoeFormats.get(i).url();
-                                            String audioQuality =allVidoeFormats.get(i).videoQuality() +"";
+                                            String videoQuality =allVidoeFormats.get(i).videoQuality() +"";
+                                            videoQuality = formatVideoQualityString(videoQuality);
+                                            String videoExtension =allVidoeFormats.get(i).extension().value() +"";
+
                                             out.println("<tr>");
-                                            out.println("<td>"+ audioQuality +"</td>");
-                                            out.println("<td><a href="+ url +" target=\"_blank\">Download</a></td>");
+                                            out.println("<td>"+ videoQuality +"</td>");
+                                            out.println("<td>"+ videoExtension +"</td>");
+                                            out.println("<td><a href="+ url +" target=\"_blank\" class=\"learn-more-btn\" >Download</a></td>");
+
                                             out.println("</tr>");
                                         }
 
@@ -288,6 +344,8 @@
 
 
                             %>
+
+
                         </div>
 
                     </div>
@@ -751,7 +809,8 @@
                     <h4>Join Our Newsletter</h4>
                     <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
                     <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                        <input type="email" name="email">
+                        <input type="submit" value="Subscribe">
                     </form>
                 </div>
 
@@ -799,6 +858,159 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6>Processing...</h6>
+               <span id="display5">null</span>
+                <div class="progress" >
+                    <div class="progress-bar" id="progress" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
+                </div>
+
+                <div class="progress" >
+                    <div class="progress-bar" id="progress2" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+
+<%--                <%--%>
+<%--                    YoutubeDownloader downloader = new YoutubeDownloader();--%>
+
+<%--                    if (request.getParameter("submit") != null) {--%>
+<%--                        YoutubeVideo video = downloader.getVideo(getVideoId(request.getParameter("vid_url")));--%>
+
+<%--                        File outputDir = new File("my_videos");--%>
+
+
+<%--                        try {--%>
+<%--                            video.downloadAsync(videoWithAudioFormats.get(0), outputDir, new OnYoutubeDownloadListener() {--%>
+<%--                                @Override--%>
+<%--                                public void onDownloading(int progress) {--%>
+<%--                                    System.out.printf("Downloaded %d%%\n", progress);--%>
+
+<%--                                }--%>
+
+<%--                                @Override--%>
+<%--                                public void onFinished(File file) {--%>
+<%--                                    System.out.println("Finished file: " + file);--%>
+<%--                                }--%>
+
+<%--                                @Override--%>
+<%--                                public void onError(Throwable throwable) {--%>
+<%--                                    System.out.println("Error: " + throwable.getLocalizedMessage());--%>
+<%--                                }--%>
+<%--                            });--%>
+<%--                        } catch (YoutubeException e) {--%>
+<%--                            e.printStackTrace();--%>
+<%--                        }--%>
+<%--                    }--%>
+<%--                %>--%>
+
+            </div>
+
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" >Save changes</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 </body>
-</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+  //  document.getElementById('btn_manddfdssds').onclick = runPgUpdate();
+
+
+// function runPgUpdate2() {
+//
+//     var ytUrl = $('#yt-url').val();
+//     var vidUrl = $('#vid-url').val();
+//     var uuid = $('#display1').val();
+//     $.post("Youtube",
+//         {
+//             yt_url: ytUrl,
+//             vid_url: vidUrl,
+//             action: "init_download"
+//         },
+//         function(result){
+//             document.getElementById("progress2").setAttribute("aria-valuenow", 55);
+//             document.getElementById("progress2").setAttribute("style", "width: " +55+ "%;");
+//             document.getElementById("progress2").innerHTML = (55 + "%");
+//             document.getElementById("progress2").setAttribute("aria-valuemax", 100);
+//
+//             $('#display1').html(result);
+//             $('#display11').val(result);
+//             // $('#display1').val(result);
+//             alert(result);
+//         });
+//
+//
+// }
+
+    function runPgUpdate() {
+        var  uuidm;
+        let x= 6;
+        var ytUrl = $('#yt-url').val();
+        var vidUrl = $('#vid-url').val();
+        var uuid = $('#display1').text();
+
+
+
+
+        $.post("Youtube",
+            {
+                yt_url: ytUrl,
+                vid_url: vidUrl,
+                action: "init_download"
+            },
+            function(result){
+                uuidm = result;
+                // alert(result);
+            });
+
+
+
+        setInterval(function() {
+            $.post("Youtube",
+                {
+                    yt_url: ytUrl,
+                    vid_url: vidUrl,
+                    uuid: uuidm,
+                    action: "fetch_percent"
+                },
+                function(result){
+                    document.getElementById("progress").setAttribute("aria-valuenow", result);
+                    document.getElementById("progress").setAttribute("style", "width: " +result+ "%;");
+                    document.getElementById("progress").innerHTML = (result + "%");
+                    $('#display5').html(result)
+                    console.log("From Other Side val 1 is "+ uuidm);
+
+                });
+
+        }, 3000)
+
+    }
+
+</script>
 </html>
