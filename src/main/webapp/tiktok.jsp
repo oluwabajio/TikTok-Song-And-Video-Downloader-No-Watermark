@@ -11,21 +11,26 @@
     <!-- Primary Meta Tags -->
     <title>TikTok Video Downloader Without Watermark - TikTok</title>
     <meta name="title" content="TikTok Video Downloader Without Watermark - TikTok">
-    <meta name="description" content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
+    <meta name="description"
+          content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://taksave.com/tiktok">
     <meta property="og:title" content="TikTok Video Downloader Without Watermark - TikTok">
-    <meta property="og:description" content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
-    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <meta property="og:description"
+          content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
+    <meta property="og:image"
+          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://taksave.com/tiktok">
     <meta property="twitter:title" content="TikTok Video Downloader Without Watermark - TikTok">
-    <meta property="twitter:description" content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
-    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+    <meta property="twitter:description"
+          content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
+    <meta property="twitter:image"
+          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -36,12 +41,15 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
           type="text/css"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet"/>
+
 
 </head>
 <body id="page-top">
@@ -77,27 +85,34 @@
         <p>This TikTok video downloader allows you download videos and </p>
         <div class="container">
 
-            <form action="TikTokVideoDownload">
+
                 <div class="row">
                     <input class="form-control col-lg-9 col-md-9 col-sm-12 p-0" id="tiktokurl" name="tiktok_url">
 
-                    <input type="submit" value="Download" class="btn btn-warning col-lg-3 col-md-3 col-sm-12 p-0">
+                    <input id="btn_download" type="button" value="Download" class="btn btn-warning col-lg-3 col-md-3 col-sm-12 p-0">
+
 
                 </div>
-            </form>
         </div>
 
         <p>This is one of the best website to download TikTok Videos Without Watermark For Free in 2020</p>
 
-<%--//For Adverts--%>
-<%--        <!-- Icon Divider-->--%>
-<%--        <div class="divider-custom divider-light">--%>
-<%--            <div class="divider-custom-line"></div>--%>
-<%--            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--%>
-<%--            <div class="divider-custom-line"></div>--%>
-<%--        </div>--%>
-<%--        <!-- Masthead Subheading-->--%>
-<%--        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>--%>
+
+        <div class="container">
+            <a href="#" id="btn_watermark" target="_blank" class="btn  mr-3 btn-md btn-outline-light">Download Video</a>
+            <a href="#" id="btn_no_watermark" target="_blank" class="btn btn-md btn-outline-light">No Watermark</a>
+            <a href="#" id="btn_audio" target="_blank" class="btn btn-md ml-3 btn-outline-light">Download Audio Mp3</a>
+        </div>
+
+        <%--//For Adverts--%>
+        <%--        <!-- Icon Divider-->--%>
+        <%--        <div class="divider-custom divider-light">--%>
+        <%--            <div class="divider-custom-line"></div>--%>
+        <%--            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--%>
+        <%--            <div class="divider-custom-line"></div>--%>
+        <%--        </div>--%>
+        <%--        <!-- Masthead Subheading-->--%>
+        <%--        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>--%>
     </div>
 </header>
 <!-- Portfolio Section-->
@@ -112,7 +127,12 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Portfolio Grid Items-->
-        <p>From your mobile devices, laptops and computers, you can now download tiktok videos without watermark for free in 2020. You do not need to create an account or login. All you have to do is paste the tiktok video url in the box above and click on the download button. <br />TikTok officially allows the download of videos with their tiktok logo watermark on it, but yhose videos are not usefulfor editing or manipulations, so to download tiktok videos without watermark, then we have created this online web platform to allow you achieve that purpose.</p>
+        <p>From your mobile devices, laptops and computers, you can now download tiktok videos without watermark for
+            free in 2020. You do not need to create an account or login. All you have to do is paste the tiktok video
+            url in the box above and click on the download button. <br/>TikTok officially allows the download of videos
+            with their tiktok logo watermark on it, but yhose videos are not usefulfor editing or manipulations, so to
+            download tiktok videos without watermark, then we have created this online web platform to allow you achieve
+            that purpose.</p>
         <p>&nbsp;</p>
         <h3>Key Features</h3>
         <ul style="list-style-type: disc;">
@@ -124,12 +144,21 @@
             <li>Better than other counterparts like snaptik, sssTikTok, kapwing, ttdown, etc.</li>
             <li>Tiktok bulk video downloader (Coming In Next update)</li>
         </ul>
-        <p>We recognized that tiktok allows users to download video, but it comes with the tiktok logo watermark which a lot of users dont like, but right now you can now get those videos without watermark by making use of Taksave.</p>
+        <p>We recognized that tiktok allows users to download video, but it comes with the tiktok logo watermark which a
+            lot of users dont like, but right now you can now get those videos without watermark by making use of
+            Taksave.</p>
         <p>&nbsp;</p>
         <h3>How To Download Tiktok Videos on Android phone</h3>
-        <p>This is a very simple process, all you have to do is get the tik tok video link or url and paste on Taksave website. Follow the below steps.<br />To Download TikTok videos without watermark on mobile phones with android os, open the tik tok app and navigate to the video you want to save. On the video page, click on the share icon, this would show you various options, click on the "Copy Link" button to get the video link.<br />Then Open your web browser and navigate to TakSave.com/tiktok then paste the copied link in the box on the website, then click on the download button.</p>
-        <h3><br />How To Download Tiktok Videos Without Watermark On Iphone</h3>
-        <p>To Download TikTok (Musically) videos on your app ios and iphones, the first step is to open the tik tok app on your device, open the video you want to download, click on the share icon; this would bring out various options for you to choose from, click on the "copy link" button. Then follow the below steps</p>
+        <p>This is a very simple process, all you have to do is get the tik tok video link or url and paste on Taksave
+            website. Follow the below steps.<br/>To Download TikTok videos without watermark on mobile phones with
+            android os, open the tik tok app and navigate to the video you want to save. On the video page, click on the
+            share icon, this would show you various options, click on the "Copy Link" button to get the video link.<br/>Then
+            Open your web browser and navigate to TakSave.com/tiktok then paste the copied link in the box on the
+            website, then click on the download button.</p>
+        <h3><br/>How To Download Tiktok Videos Without Watermark On Iphone</h3>
+        <p>To Download TikTok (Musically) videos on your app ios and iphones, the first step is to open the tik tok app
+            on your device, open the video you want to download, click on the share icon; this would bring out various
+            options for you to choose from, click on the "copy link" button. Then follow the below steps</p>
         <ol>
             <li>Open safari web browser and go to "https://taksave.com/tiktok"</li>
             <li>Paste the copied video link in the link textbox on the page</li>
@@ -142,9 +171,16 @@
             <li>On the share options, click on "Save"</li>
             <li>Now your tiktok videos would appear in your camera roll</li>
         </ol>
-        <h3><br />Download video without watermark on a PC</h3>
-        <p>Downloading no watermark tik tok videos online on pc is the easiest of all, all you have to do is to open your preferred or default browser. Youcan use any web browser of your choice like firefox, chrome,etc. Then navigate to "https://taksave.com/tiktok", paste your already copied tiktok video link into the textbox on the page, then click on the download button.This would show you various options, select "Download Video Without watermark."</p>
-        <p>Other Exciting features we are currently working on to include in our upcoming update is the ability to download all tiktok videos of a user, mass and bulk Download, etc.<br />The app is specially created to assist users, its purpose is to remain simple and allow visitors have fun downloading videos of their choice from social media platforms.</p>
+        <h3><br/>Download video without watermark on a PC</h3>
+        <p>Downloading no watermark tik tok videos online on pc is the easiest of all, all you have to do is to open
+            your preferred or default browser. Youcan use any web browser of your choice like firefox, chrome,etc. Then
+            navigate to "https://taksave.com/tiktok", paste your already copied tiktok video link into the textbox on
+            the page, then click on the download button.This would show you various options, select "Download Video
+            Without watermark."</p>
+        <p>Other Exciting features we are currently working on to include in our upcoming update is the ability to
+            download all tiktok videos of a user, mass and bulk Download, etc.<br/>The app is specially created to
+            assist users, its purpose is to remain simple and allow visitors have fun downloading videos of their choice
+            from social media platforms.</p>
         <p>&nbsp;</p>
         <div class="row">
             <p></p>
@@ -166,33 +202,45 @@
         <!-- About Section Content-->
         <div class="row bg-secondary">
             <div class="container bg-secondary">
-            <h4 style="text-align: center;">About TikTok</h4>
-            <p style="text-align: center;">TikTok formerly Duolin in china merged with musically to become what it is today. The social media app is owned by Tech Giant Byte dance from China.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">What Type of Videos can i Download</h4>
-            <p style="text-align: center;"><br />With our website, you can download all tiktok videos as long as the url is valid. Below are examples of valid urls.<br />-&gt; https://vt.tiktok.com/fdf7df/<br />or<br />https://v.douyin.com/fdkbjf9/<br />or<br />https://www.tiktok.com/@fadeelatuuu/video/6839652260096609542<br />or<br />https://m.tiktok.com/v/6839652260096609542.html<br />Please ensure you copied the correct video url before clicking on the download button.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">It It Free?</h4>
-            <p style="text-align: center;">Yes Our website is to use anytime and anyday and we put advert on the page to support us.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">Does Taksave Save Copies of the Videos?</h4>
-            <p style="text-align: center;"><br />We do not save copies of the videos on our servers, all videos are downloaded directly from tiktok servers.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">Where Does My Download Save To?</h4>
-            <p style="text-align: center;">Depending on your web browser and pc operating system, your downloads usually save to your default download folders or when downloading, your browser asks you to specify a directory to download the video to.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">Do I Need To login to download videos?</h4>
-            <p style="text-align: center;">No, you do not need to login to download videos. All tiktok videos are accessible without loggin in.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">Why Should i. use Taksave</h4>
-            <p style="text-align: center;">Taksave is very fast and its 100% free. Taksave is one of the most popular tiktok downloader app online and its better than the others.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">Do I Need to Install External Softwares and Extensions?</h4>
-            <p style="text-align: center;">No.you do not need any other external software or extension to use taksave, all you need to do is just to visit our website using your favourite web browser.</p>
-            <p style="text-align: center;">&nbsp;</p>
-            <h4 style="text-align: center;">How Do I Get TikTok Video Link</h4>
-            <p style="text-align: center;">If you are using pc, copy the url from the url box in your web browser. If you are on mobile devices like android or Ios, you click on the share icon and then click on "Copy Link"</p>
-            <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">About TikTok</h4>
+                <p style="text-align: center;">TikTok formerly Duolin in china merged with musically to become what it
+                    is today. The social media app is owned by Tech Giant Byte dance from China.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">What Type of Videos can i Download</h4>
+                <p style="text-align: center;"><br/>With our website, you can download all tiktok videos as long as the
+                    url is valid. Below are examples of valid urls.<br/>-&gt; https://vt.tiktok.com/fdf7df/<br/>or<br/>https://v.douyin.com/fdkbjf9/<br/>or<br/>https://www.tiktok.com/@fadeelatuuu/video/6839652260096609542<br/>or<br/>https://m.tiktok.com/v/6839652260096609542.html<br/>Please
+                    ensure you copied the correct video url before clicking on the download button.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">It It Free?</h4>
+                <p style="text-align: center;">Yes Our website is to use anytime and anyday and we put advert on the
+                    page to support us.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">Does Taksave Save Copies of the Videos?</h4>
+                <p style="text-align: center;"><br/>We do not save copies of the videos on our servers, all videos are
+                    downloaded directly from tiktok servers.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">Where Does My Download Save To?</h4>
+                <p style="text-align: center;">Depending on your web browser and pc operating system, your downloads
+                    usually save to your default download folders or when downloading, your browser asks you to specify
+                    a directory to download the video to.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">Do I Need To login to download videos?</h4>
+                <p style="text-align: center;">No, you do not need to login to download videos. All tiktok videos are
+                    accessible without loggin in.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">Why Should i. use Taksave</h4>
+                <p style="text-align: center;">Taksave is very fast and its 100% free. Taksave is one of the most
+                    popular tiktok downloader app online and its better than the others.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">Do I Need to Install External Softwares and Extensions?</h4>
+                <p style="text-align: center;">No.you do not need any other external software or extension to use
+                    taksave, all you need to do is just to visit our website using your favourite web browser.</p>
+                <p style="text-align: center;">&nbsp;</p>
+                <h4 style="text-align: center;">How Do I Get TikTok Video Link</h4>
+                <p style="text-align: center;">If you are using pc, copy the url from the url box in your web browser.
+                    If you are on mobile devices like android or Ios, you click on the share icon and then click on
+                    "Copy Link"</p>
+                <p style="text-align: center;">&nbsp;</p>
             </div>
         </div>
         <!-- About Section Button-->
@@ -536,15 +584,65 @@
         </div>
     </div>
 </div>
-<!-- Bootstrap core JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+    $('#btn_watermark').hide();
+    $('#btn_no_watermark').hide();
+    $('#btn_audio').hide();
+
+    $('#btn_download').click(function (e) {
+        $.post("TikTok",
+            {
+                url: $('#tiktokurl').val(),
+                action: "watermark_video"
+            },
+            function (result) {
+                // alert(result);
+                $('#btn_watermark').show();
+                $('#btn_watermark').attr("href", result);
+
+            });
+    });
+    $('#btn_download').click(function (e) {
+        $.post("TikTok",
+            {
+                url: $('#tiktokurl').val(),
+                action: "no_watermark_video"
+            },
+            function (result) {
+                // alert(result);
+                $('#btn_no_watermark').show();
+                $('#btn_no_watermark').attr("href", result);
+            });
+    });
+
+    $('#btn_download').click(function (e) {
+        $.post("TikTok",
+            {
+                url: $('#tiktokurl').val(),
+                action: "download_audio"
+            },
+            function (result) {
+              //  alert(result);
+                $('#btn_audio').show();
+                $('#btn_audio').attr("href", result)
+            });
+    });
+
+
+</script>
+
+
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
 <!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<%--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>--%>
 <!-- Contact form JS-->
 <script src="assets/mail/jqBootstrapValidation.js"></script>
 <script src="assets/mail/contact_me.js"></script>
 <!-- Core theme JS-->
 <script src="js/scripts.js"></script>
+
 </body>
 </html>
