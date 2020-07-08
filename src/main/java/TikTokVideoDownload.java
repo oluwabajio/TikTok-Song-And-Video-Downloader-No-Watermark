@@ -37,8 +37,6 @@ public class TikTokVideoDownload extends HttpServlet {
             System.out.println(absHref);
         }
 
-
-
         final Document document = Jsoup.connect(url)
 //                .userAgent("Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30")
                 .get();
@@ -52,6 +50,7 @@ public class TikTokVideoDownload extends HttpServlet {
                 final String substring3 = substring2.substring(0, substring2.indexOf("]"));
               String  playURL = substring3.substring(1, substring3.length() - 1);
                 System.out.println(playURL);
+                withoutWatermark(playURL);
             }
         }
 
@@ -73,6 +72,7 @@ public class TikTokVideoDownload extends HttpServlet {
                     stringBuffer.append(readLine);
 
                     if (stringBuffer.toString().contains("vid:")) {
+                        System.out.println("stringBuffer.toString()"+ stringBuffer.toString());
                         try {
                             if (stringBuffer.substring(stringBuffer.indexOf("vid:")).substring(0, 4).equals("vid:")) {
                                 final String substring = stringBuffer.substring(stringBuffer.indexOf("vid:"));

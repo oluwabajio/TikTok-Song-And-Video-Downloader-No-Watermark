@@ -8,7 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Dowload TikTok Videos for Free without Watermark</title>
+    <!-- Primary Meta Tags -->
+    <title>TikTok Video Downloader Without Watermark - TikTok</title>
+    <meta name="title" content="TikTok Video Downloader Without Watermark - TikTok">
+    <meta name="description" content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taksave.com/tiktok">
+    <meta property="og:title" content="TikTok Video Downloader Without Watermark - TikTok">
+    <meta property="og:description" content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://taksave.com/tiktok">
+    <meta property="twitter:title" content="TikTok Video Downloader Without Watermark - TikTok">
+    <meta property="twitter:description" content="Download TikTok videos without watermark online for free in 2020. Best TikTok No Watermark video downloader">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -56,7 +73,8 @@
         <!-- Masthead Avatar Image-->
         <%--        <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" />--%>
         <!-- Masthead Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0">Download Tik Tok Videos</h1>
+        <h1 class="text-uppercase mb-0">Download Tik Tok Videos</h1>
+        <p>This TikTok video downloader allows you download videos and </p>
         <div class="container">
 
             <form action="TikTokVideoDownload">
@@ -69,22 +87,24 @@
             </form>
         </div>
 
+        <p>This is one of the best website to download TikTok Videos Without Watermark For Free in 2020</p>
 
-        <!-- Icon Divider-->
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
-        </div>
-        <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+<%--//For Adverts--%>
+<%--        <!-- Icon Divider-->--%>
+<%--        <div class="divider-custom divider-light">--%>
+<%--            <div class="divider-custom-line"></div>--%>
+<%--            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--%>
+<%--            <div class="divider-custom-line"></div>--%>
+<%--        </div>--%>
+<%--        <!-- Masthead Subheading-->--%>
+<%--        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>--%>
     </div>
 </header>
 <!-- Portfolio Section-->
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
         <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">TikTok Video Downloader</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -92,75 +112,51 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Portfolio Grid Items-->
+        <p>From your mobile devices, laptops and computers, you can now download tiktok videos without watermark for free in 2020. You do not need to create an account or login. All you have to do is paste the tiktok video url in the box above and click on the download button. <br />TikTok officially allows the download of videos with their tiktok logo watermark on it, but yhose videos are not usefulfor editing or manipulations, so to download tiktok videos without watermark, then we have created this online web platform to allow you achieve that purpose.</p>
+        <p>&nbsp;</p>
+        <h3>Key Features</h3>
+        <ul style="list-style-type: disc;">
+            <li>Download your own tiktok video without watermark online</li>
+            <li>You get videos with the highest quality</li>
+            <li>No registration and login</li>
+            <li>Works on all pc, laptops, tablets and phones.</li>
+            <li>Works on all browser and operating systems.</li>
+            <li>Better than other counterparts like snaptik, sssTikTok, kapwing, ttdown, etc.</li>
+            <li>Tiktok bulk video downloader (Coming In Next update)</li>
+        </ul>
+        <p>We recognized that tiktok allows users to download video, but it comes with the tiktok logo watermark which a lot of users dont like, but right now you can now get those videos without watermark by making use of Taksave.</p>
+        <p>&nbsp;</p>
+        <h3>How To Download Tiktok Videos on Android phone</h3>
+        <p>This is a very simple process, all you have to do is get the tik tok video link or url and paste on Taksave website. Follow the below steps.<br />To Download TikTok videos without watermark on mobile phones with android os, open the tik tok app and navigate to the video you want to save. On the video page, click on the share icon, this would show you various options, click on the "Copy Link" button to get the video link.<br />Then Open your web browser and navigate to TakSave.com/tiktok then paste the copied link in the box on the website, then click on the download button.</p>
+        <h3><br />How To Download Tiktok Videos Without Watermark On Iphone</h3>
+        <p>To Download TikTok (Musically) videos on your app ios and iphones, the first step is to open the tik tok app on your device, open the video you want to download, click on the share icon; this would bring out various options for you to choose from, click on the "copy link" button. Then follow the below steps</p>
+        <ol>
+            <li>Open safari web browser and go to "https://taksave.com/tiktok"</li>
+            <li>Paste the copied video link in the link textbox on the page</li>
+            <li>Click on the download button</li>
+            <li>Click on "Download. Video Without Watermark"</li>
+            <li>A Download icon would pop on top of safari web browser, click on it and it would</li>
+            <li>show you the video you just downloaded.</li>
+            <li>Long press on the video and it would open various options, then select "share" to</li>
+            <li>show the various share options.</li>
+            <li>On the share options, click on "Save"</li>
+            <li>Now your tiktok videos would appear in your camera roll</li>
+        </ol>
+        <h3><br />Download video without watermark on a PC</h3>
+        <p>Downloading no watermark tik tok videos online on pc is the easiest of all, all you have to do is to open your preferred or default browser. Youcan use any web browser of your choice like firefox, chrome,etc. Then navigate to "https://taksave.com/tiktok", paste your already copied tiktok video link into the textbox on the page, then click on the download button.This would show you various options, select "Download Video Without watermark."</p>
+        <p>Other Exciting features we are currently working on to include in our upcoming update is the ability to download all tiktok videos of a user, mass and bulk Download, etc.<br />The app is specially created to assist users, its purpose is to remain simple and allow visitors have fun downloading videos of their choice from social media platforms.</p>
+        <p>&nbsp;</p>
         <div class="row">
-            <!-- Portfolio Item 1-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt=""/>
-                </div>
-            </div>
-            <!-- Portfolio Item 2-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/cake.png" alt=""/>
-                </div>
-            </div>
-            <!-- Portfolio Item 3-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/circus.png" alt=""/>
-                </div>
-            </div>
-            <!-- Portfolio Item 4-->
-            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/game.png" alt=""/>
-                </div>
-            </div>
-            <!-- Portfolio Item 5-->
-            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/safe.png" alt=""/>
-                </div>
-            </div>
-            <!-- Portfolio Item 6-->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt=""/>
-                </div>
-            </div>
+            <p></p>
+
         </div>
     </div>
 </section>
 <!-- About Section-->
-<section class="page-section bg-primary text-white mb-0" id="about">
+<section class="page-section bg-secondary text-white mb-0" id="about">
     <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-white">FAQ</h2>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -168,13 +164,36 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- About Section Content-->
-        <div class="row">
-            <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start
-                Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well
-                as optional SASS stylesheets for easy customization.</p></div>
-            <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change
-                the icon in the dividers, and add your email address to the contact form to make it fully
-                functional!</p></div>
+        <div class="row bg-secondary">
+            <div class="container bg-secondary">
+            <h4 style="text-align: center;">About TikTok</h4>
+            <p style="text-align: center;">TikTok formerly Duolin in china merged with musically to become what it is today. The social media app is owned by Tech Giant Byte dance from China.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">What Type of Videos can i Download</h4>
+            <p style="text-align: center;"><br />With our website, you can download all tiktok videos as long as the url is valid. Below are examples of valid urls.<br />-&gt; https://vt.tiktok.com/fdf7df/<br />or<br />https://v.douyin.com/fdkbjf9/<br />or<br />https://www.tiktok.com/@fadeelatuuu/video/6839652260096609542<br />or<br />https://m.tiktok.com/v/6839652260096609542.html<br />Please ensure you copied the correct video url before clicking on the download button.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">It It Free?</h4>
+            <p style="text-align: center;">Yes Our website is to use anytime and anyday and we put advert on the page to support us.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">Does Taksave Save Copies of the Videos?</h4>
+            <p style="text-align: center;"><br />We do not save copies of the videos on our servers, all videos are downloaded directly from tiktok servers.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">Where Does My Download Save To?</h4>
+            <p style="text-align: center;">Depending on your web browser and pc operating system, your downloads usually save to your default download folders or when downloading, your browser asks you to specify a directory to download the video to.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">Do I Need To login to download videos?</h4>
+            <p style="text-align: center;">No, you do not need to login to download videos. All tiktok videos are accessible without loggin in.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">Why Should i. use Taksave</h4>
+            <p style="text-align: center;">Taksave is very fast and its 100% free. Taksave is one of the most popular tiktok downloader app online and its better than the others.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">Do I Need to Install External Softwares and Extensions?</h4>
+            <p style="text-align: center;">No.you do not need any other external software or extension to use taksave, all you need to do is just to visit our website using your favourite web browser.</p>
+            <p style="text-align: center;">&nbsp;</p>
+            <h4 style="text-align: center;">How Do I Get TikTok Video Link</h4>
+            <p style="text-align: center;">If you are using pc, copy the url from the url box in your web browser. If you are on mobile devices like android or Ios, you click on the share icon and then click on "Copy Link"</p>
+            <p style="text-align: center;">&nbsp;</p>
+            </div>
         </div>
         <!-- About Section Button-->
         <div class="text-center mt-4">
